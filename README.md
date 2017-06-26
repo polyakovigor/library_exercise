@@ -13,7 +13,7 @@ Ruby 2.4, Rails 5+, Mysql/PostreSQL/MongoDB(mongo is encouraged), Bootstrap, Rsp
 # What should you do
 1. Books page. The list with all books 20 per page. Shows basic info:
 
-![Example](app/assets/images/lb.jpeg)
+    ![Example](app/assets/images/lb.jpeg)
 
     * Image
     * Book name - this is a link to book /show page.
@@ -21,9 +21,10 @@ Ruby 2.4, Rails 5+, Mysql/PostreSQL/MongoDB(mongo is encouraged), Bootstrap, Rsp
     * Status (status can be in/out). If status is out then display user name who took a book.
     * Edit, delete and create new book.
     Top 5 books based on likes count and taken count. Top books are displayed regardless of pagination.
+    
 1. Book page. Verbose information about a book.
 
-![Example](app/assets/images/lb1.jpeg)
+    ![Example](app/assets/images/lb1.jpeg)
 
     * Image
     * Name
