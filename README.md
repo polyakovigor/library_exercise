@@ -12,7 +12,9 @@ Ruby 2.4, Rails 5+, Mysql/PostreSQL/MongoDB(mongo is encouraged), Bootstrap, Rsp
   Pages should not be 'responsive', just make them nice view on mobile devices.
 # What should you do
 1. Books page. The list with all books 20 per page. Shows basic info:
+
 ![Example](app/assets/images/lb.jpeg)
+
     * Image
     * Book name - this is a link to book /show page.
     * Author
@@ -20,7 +22,9 @@ Ruby 2.4, Rails 5+, Mysql/PostreSQL/MongoDB(mongo is encouraged), Bootstrap, Rsp
     * Edit, delete and create new book.
     Top 5 books based on likes count and taken count. Top books are displayed regardless of pagination.
 1. Book page. Verbose information about a book.
+
 ![Example](app/assets/images/lb1.jpeg)
+
     * Image
     * Name
     * Description
