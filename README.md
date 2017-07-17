@@ -11,6 +11,8 @@ Follow current technology stack:
 Ruby 2.4, Rails 5+, Mysql/PostreSQL/MongoDB(mongo is preferred), Bootstrap, Rspec.
   Pages should not be 'responsive', just make them look nice on mobile devices.
 # What should you do
+
+##### First of all, fork it.
 1. Books page. The list with all the books, 20 per page. Shows basic info:
 
     ![Example](app/assets/images/lb.jpeg)
