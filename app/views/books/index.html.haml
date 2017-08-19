@@ -1,0 +1,20 @@
+.jumbotron
+  -# There will be carousel
+  .container.text-center
+    %h1 My Library
+    %p Some text ...
+.container-fluid.bg-3
+  .row
+    - @books.each do |book|
+      .col-sm-4
+        .panel.panel-primary
+          .panel-heading
+            = book.name
+          .panel-body
+            = link_to (image_tag 'https://placehold.it/150x80?text=IMAGE', title: book.name, class: 'img-responsive'), book
+          .panel-footer
+            %p Book Author
+            %p
+              = link_to 'Edit', edit_book_path(book)
+            %p
+              = link_to 'Destroy', book, method: :delete, data: { confirm: 'Are you sure?' }

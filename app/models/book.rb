@@ -3,5 +3,5 @@ class Book
 
   field :name
   field :description
-  field :_id, default: -> { name }
+  # field :_id, default: -> { name }
 end
