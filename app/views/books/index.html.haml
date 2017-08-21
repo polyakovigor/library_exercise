@@ -6,7 +6,7 @@
 .container-fluid.bg-3
   .row
     - @books.each do |book|
-      .col-sm-4
+      .col-sm-3
         .panel.panel-primary
           .panel-heading
             = book.name
@@ -18,3 +18,4 @@
               = link_to 'Edit', edit_book_path(book)
             %p
               = link_to 'Destroy', book, method: :delete, data: { confirm: 'Are you sure?' }
+  = paginate @books if present?

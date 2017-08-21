@@ -6,3 +6,9 @@ footer {
 .img-responsive {
   width: 100%;
 }
+
+.panel-heading {
+  overflow: hidden;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+}
