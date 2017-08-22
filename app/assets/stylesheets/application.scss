@@ -16,3 +16,13 @@
 
 @import "bootstrap-sprockets";
 @import "bootstrap";
+
+input#search {
+  width: 150px;
+  -webkit-transition: width .35s ease-in-out;
+  transition: width .35s ease-in-out;
+}
+
+input#search:focus {
+  width: 250px;
+}

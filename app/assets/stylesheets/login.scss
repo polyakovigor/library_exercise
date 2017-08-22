@@ -66,11 +66,19 @@
 }
 
 // *Boxes* //
-.logo {
+.cancel {
   color: #fff;
   font: small-caps bold 24px/1 sans-serif;
   letter-spacing: 0.0625em;
+}
+
+.logo {
   border-bottom: 2px solid #ffd048;
+  @extend .cancel
+}
+
+label {
+  color: #5bc0de;
 }
 
 .login-box {
@@ -176,7 +184,6 @@ input.btn.btn-lg.btn-default {
 }
 
 // *Form Errors* //
-
 .field_with_errors input {
   border-color: red;
   border-bottom-style: groove;
