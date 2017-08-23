@@ -1,3 +1,5 @@
+@import "var";
+
 // *Checkbox* //
 .checkbox {
   padding-left: 20px;
@@ -67,22 +69,22 @@
 
 // *Boxes* //
 .cancel {
-  color: #fff;
+  color: $white;
   font: small-caps bold 24px/1 sans-serif;
   letter-spacing: 0.0625em;
 }
 
 .logo {
-  border-bottom: 2px solid #ffd048;
+  border-bottom: 2px solid $medium-yellow;
   @extend .cancel
 }
 
-label {
-  color: #5bc0de;
+.field label {
+  color: $light-blue;
 }
 
 .login-box {
-  background: #276bb7;
+  background: $medium-blue;
   padding: 50px;
   border-radius: 15px;
   font-family: "Arial", Helvetica, sans-serif;
@@ -94,8 +96,8 @@ label {
   padding: 50px;
   border-radius: 15px;
   margin-right: -150px;
-  background: #fff;
-  border: 2px solid #5bc0de;
+  background: $white;
+  border: 2px solid $light-blue;
   box-shadow: 0 4px 8px 0 rgba(40, 192, 221, 0.2);
   transition: 0.3s;
 }
@@ -114,7 +116,7 @@ label {
     text-transform: uppercase;
   }
   input[type=text], [type=email], [type=password] {
-    color: black;
+    color: $black;
     width: 100%;
     padding: 6px 0;
     margin: 6px 0;
@@ -122,37 +124,33 @@ label {
     border-bottom-style: groove;
     &:focus {
       outline: none !important;
-      border-bottom-color: #5bc0de;
+      border-bottom-color: $light-blue;
     }
   }
 }
 
 ::-webkit-input-placeholder { /* Chrome/Opera/Safari */
-  color: lightgray;
+  color: $light-grey;
   letter-spacing: 4px;
   font-size: 100%;
-  font-weight: bold;
 }
 
 ::-moz-placeholder { /* Firefox 19+ */
-  color: lightgray;
+  color: $light-grey;
   letter-spacing: 4px;
   font-size: 100%;
-  font-weight: bold;
 }
 
 :-ms-input-placeholder { /* IE 10+ */
-  color: lightgray;
+  color: $light-grey;
   letter-spacing: 4px;
   font-size: 100%;
-  font-weight: bold;
 }
 
 :-moz-placeholder { /* Firefox 18- */
-  color: lightgray;
+  color: $light-grey;
   letter-spacing: 4px;
   font-size: 100%;
-  font-weight: bold;
 }
 
 .actions {
@@ -161,31 +159,31 @@ label {
 }
 
 input.btn.btn-lg.btn-default {
-  color: #5bc0de;
-  border: 2px solid #5bc0de;
+  color: $light-blue;
+  border: 2px solid $light-blue;
   &:hover {
-    background-color: #5bc0de;
-    color: #fff;
-    border: 2px solid #fff;
+    background-color: $light-blue;
+    color: $white;
+    border: 2px solid $white;
   }
 }
 
 .login-links a {
   display: inline-block;
   padding-top: 15px;
-  color: #ffd048;
+  color: $medium-yellow;
   text-decoration: none;
   font-weight: bold;
   &:hover, :visited {
     text-decoration: none;
-    color: #5bc0de;
+    color: $light-blue;
     letter-spacing: 0.1em;
   }
 }
 
 // *Form Errors* //
 .field_with_errors input {
-  border-color: red;
+  border-color: $red;
   border-bottom-style: groove;
 }
 
