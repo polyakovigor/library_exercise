@@ -63,6 +63,9 @@ GEM
       activemodel (>= 4.0.0)
       activesupport (>= 4.0.0)
       mime-types (>= 1.16)
+    carrierwave-mongoid (0.1.0)
+      carrierwave
+      mongoid
     childprocess (0.7.1)
       ffi (~> 1.0, >= 1.0.11)
     coffee-rails (4.2.2)
@@ -279,6 +282,7 @@ DEPENDENCIES
   byebug
   capybara
   carrierwave
+  carrierwave-mongoid
   coffee-rails (~> 4.2)
   database_cleaner
   devise
@@ -310,4 +314,4 @@ DEPENDENCIES
   web-console (>= 3.3.0)
 
 BUNDLED WITH
-   1.15.3
+   1.15.4

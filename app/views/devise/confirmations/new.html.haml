@@ -1,10 +1,19 @@
-%h2 Resend confirmation instructions
-= form_for(resource, as: resource_name, url: confirmation_path(resource_name), html: { method: :post }) do |f|
-  = devise_error_messages!
-  .field
-    = f.label :email
-    %br/
-    = f.email_field :email, autofocus: true, value: (resource.pending_reconfirmation? ? resource.unconfirmed_email : resource.email)
-  .actions
-    = f.submit 'Resend confirmation instructions'
-= render 'devise/shared/links'
+.row
+  .col-xs-10.col-md-8.col-md-offset-2.col-lg-7.col-lg-offset-3
+    .login-box
+      .logo
+        %h2 Resend confirmation instructions
+      = form_for(resource, as: resource_name, url: confirmation_path(resource_name), html: { method: :post }) do |f|
+        .form-box
+          - if resource.errors.any?
+            #error_explanation
+              %ul.alert.alert-danger.alert-dismissable
+                %a.close{ aria: { label: 'close' }, data: { dismiss: 'alert' }, href: '#' } ×
+                - resource.errors.full_messages.each do |message|
+                  %li= message
+          .field
+            = f.label :email
+            = f.email_field :email, value: (resource.pending_reconfirmation? ? resource.unconfirmed_email : resource.email)
+        .actions
+          = f.submit 'Resend confirmation instructions', class: 'btn btn-lg btn-default'
+        = render 'devise/shared/links'

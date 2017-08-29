@@ -24,6 +24,7 @@ gem 'haml', '~> 5.0.2'
 gem 'dotenv-rails'
 gem 'devise'
 gem 'carrierwave'
+gem 'carrierwave-mongoid', require: 'carrierwave/mongoid'
 gem 'mini_magick'
 gem 'omniauth'
 

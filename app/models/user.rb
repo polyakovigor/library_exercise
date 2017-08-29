@@ -1,13 +1,16 @@
 class User
   include Mongoid::Document
-  # Include default devise modules. Others available are:
-  # :confirmable, :lockable, :timeoutable and :omniauthable
+
   validates :first_name, :last_name, presence: true, length: { maximum: 15 }
 
   devise :database_authenticatable, :registerable,
          :recoverable, :rememberable, :trackable,
-         :validatable, :confirmable, :lockable
+         :validatable, :confirmable, :lockable,
+         :timeoutable, :omniauthable
 
+  def full_name
+    "#{first_name} #{last_name}"
+  end
 
   field :first_name,         type: String
   field :last_name,          type: String
