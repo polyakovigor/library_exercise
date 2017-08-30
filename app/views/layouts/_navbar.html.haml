@@ -1,4 +1,4 @@
-%nav.navbar.navbar-inverse.navbar-fixed-top
+%nav.navbar.navbar-inverse
   .container-fluid
     .navbar-header
       %button.navbar-toggle{ data: { target: '#myNavbar', toggle: 'collapse' }, type: 'button' }
@@ -16,28 +16,29 @@
           = link_to 'About', '#'
         %li
           = link_to 'Contact', '#'
-      .navbar-form.navbar-left
+      %ul.nav.navbar-nav.navbar-form
         = form_tag '#', method: :get do
-          .form-group
-            = text_field_tag :search, params[:search], placeholder: 'Search', class: 'form-control'
-          .form-group
-            = submit_tag 'Search', name: nil, class: 'btn btn-default'
+          .input-group
+            = text_field_tag :search, params[:search], placeholder: 'Search...', class: 'form-control'
+            .input-group-btn
+              = button_tag type: 'submit', class: 'btn btn-default' do
+                %i.glyphicon.glyphicon-search
       %ul.nav.navbar-nav.navbar-right
         - if user_signed_in?
-          %li.active
+          %li
             = link_to edit_user_registration_path, title: current_user.email do
               Profile
-              %span.glyphicon.glyphicon-user
+              %span.glyphicon.glyphicon-user.logo-small
           %li
             = link_to destroy_user_session_path, method: :delete do
               Logout
-              %span.glyphicon.glyphicon-log-out{ aria: { hidden: true } }
+              %span.glyphicon.glyphicon-log-out.logo-small{ aria: { hidden: true } }
         - else
           %li
             = link_to new_user_registration_path do
               Sign Up
-              %span.glyphicon.glyphicon-user{ aria: { hidden: true } }
+              %span.glyphicon.glyphicon-user.logo-small{ aria: { hidden: true } }
           %li
             = link_to new_user_session_path do
               Sign In
-              %span.glyphicon.glyphicon-log-in{ aria: { hidden: true } }
+              %span.glyphicon.glyphicon-log-in.logo-small{ aria: { hidden: true } }
