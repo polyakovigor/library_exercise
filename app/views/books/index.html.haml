@@ -1,29 +1,29 @@
 #myCarousel.carousel.slide{ data: { ride: 'carousel' } }
   %ol.carousel-indicators
-    %li.active{'data-slide-to' => 0, data: { target: '#myCarousel' } }
-    %li{'data-slide-to' => 1, data: { target: '#myCarousel' } }
-    %li{'data-slide-to' => 2, data: { target: '#myCarousel' } }
-    %li{'data-slide-to' => 3, data: { target: '#myCarousel' } }
-    %li{'data-slide-to' => 4, data: { target: '#myCarousel' } }
+    %li.active{ data: { 'slide-to' => 0, target: '#myCarousel' } }
+    %li{ data: { 'slide-to' => 1, target: '#myCarousel' } }
+    %li{ data: { 'slide-to' => 2, target: '#myCarousel' } }
+    %li{ data: { 'slide-to' => 3, target: '#myCarousel' } }
+    %li{ data: { 'slide-to' => 4, target: '#myCarousel' } }
   .carousel-inner
     .item.active
-      = image_tag 'https://placehold.it/150x80?text=BOOK'
+      = image_tag 'https://placehold.it/1200x400?text=BOOK'
       .carousel-caption
         %h3 Book #1
     .item
-      = image_tag 'https://placehold.it/150x80?text=BOOK'
+      = image_tag 'https://placehold.it/1200x400?text=BOOK'
       .carousel-caption
         %h3 Book #2
     .item
-      = image_tag 'https://placehold.it/150x80?text=BOOK'
+      = image_tag 'https://placehold.it/1200x400?text=BOOK'
       .carousel-caption
         %h3 Book #3
     .item
-      = image_tag 'https://placehold.it/150x80?text=BOOK'
+      = image_tag 'https://placehold.it/1200x400?text=BOOK'
       .carousel-caption
         %h3 Book #4
     .item
-      = image_tag 'https://placehold.it/150x80?text=BOOK'
+      = image_tag 'https://placehold.it/1200x400?text=BOOK'
       .carousel-caption
         %h3 Book #5
   %a.left.carousel-control{ data: { slide: 'prev' }, href: '#myCarousel' }
@@ -37,7 +37,7 @@
   .row
     - @books.each do |book|
       .col-xs-12.col-sm-6.col-md-6.col-lg-3
-        .panel.panel-primary
+        .panel.panel-info
           .panel-heading
             = book.name
           .panel-body

@@ -1,16 +1,11 @@
 class User
   include Mongoid::Document
-
-  validates :first_name, :last_name, presence: true, length: { maximum: 15 }
+  include Mongoid::Timestamps
 
   devise :database_authenticatable, :registerable,
          :recoverable, :rememberable, :trackable,
          :validatable, :confirmable, :lockable,
          :timeoutable, :omniauthable
-
-  def full_name
-    "#{first_name} #{last_name}"
-  end
 
   field :first_name,         type: String
   field :last_name,          type: String
@@ -43,4 +38,11 @@ class User
   field :unlock_token,    type: String # Only if unlock strategy is :email or :both
   field :locked_at,       type: Time
 
+  validates :first_name, :last_name, presence: true, length: { maximum: 15 }
+
+  has_many :books
+
+  def full_name
+    "#{first_name} #{last_name}"
+  end
 end

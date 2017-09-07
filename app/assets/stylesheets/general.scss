@@ -1,6 +1,5 @@
-@import "colors";
+@import "variables";
 
-// *Navbar* //
 .navbar {
   padding-top: 15px;
   padding-bottom: 15px;
@@ -10,46 +9,42 @@
   font-size: 0.875em;
   letter-spacing: 2px;
   font-family: verdana, arial, helvetica, sans-serif;
-}
 
-.navbar-inverse .navbar-nav li a {
-  color: $white;
-  &:hover {
-    color: $light-blue !important;
-  }
-}
-
-input#search {
-  width: 150px;
-  -webkit-transition: width .35s ease-in-out;
-  transition: width .35s ease-in-out;
-  &:focus {
-    width: 250px;
-  }
-}
-
-.navbar-inverse .navbar-brand {
-  color: $white;
-  font-weight: 800;
-  font-family: "Times New Roman", Times, serif;
-  &:hover {
-    color: $MediumSpringGreen;
-  }
-}
-
-.input-group {
-  display: block;
-}
-
-button.btn.btn-default {
-  color: $light-blue;
-  &:hover {
-    background-color: $light-blue;
+  .navbar-brand {
     color: $white;
+    font-size: 1.875em;
+    font-weight: 800;
+    font-family: Courier, monospace;
+  }
+
+  .navbar-form {
+    .input-group {
+      display: block;
+    }
+
+    input#search {
+      width: 250px;
+    }
+
+    button.btn.btn-default {
+      color: $light-blue;
+      &:hover {
+        background-color: $light-blue;
+        color: $white;
+      }
+    }
+  }
+
+  .logo-small {
+    font-size: large;
   }
 }
 
-@media (max-width: 991px) {
+@media (max-width: 992px) {
+  .navbar-right .dropdown-menu {
+    right: 0;
+    left: 0;
+  }
   .navbar-header {
     float: none;
   }
@@ -86,7 +81,7 @@ button.btn.btn-default {
   }
 }
 
-// *Footer* //
+
 footer {
   border-top: 1px solid $light-blue;
   padding: 30px 0;
@@ -94,6 +89,7 @@ footer {
 }
 
 // *Container* //
+
 .alert {
   margin-top: 20px;
 }
@@ -101,28 +97,40 @@ footer {
 .carousel {
   margin-top: 50px;
   margin-bottom: 60px;
+
+  .carousel-inner img {
+    width: 100%;
+    margin: auto;
+    min-height:200px;
+  }
 }
 
-.img-thumbnail {
-  //width: 100%;
+@media (max-width: 600px) {
+  .carousel-caption {
+    display: none;
+  }
 }
 
-.carousel-inner > .item > img,
-.carousel-inner > .item > a > img {
-  width: 70%;
-  margin: auto;
+.show-book {
+  padding: 60px 50px;
 }
 
 .img-responsive {
   width: 100%;
 }
 
-.panel-heading {
-  overflow: hidden;
-  white-space: nowrap;
-  text-overflow: ellipsis;
-}
+.panel.panel-info {
+  box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
+  transition: 0.3s;
+  width: 99%;
+  background-color: $white;
+  &:hover {
+    box-shadow: 0 8px 36px 0 $black;
+  }
 
-.logo-small {
-  font-size: large;
+  .panel-heading {
+    overflow: hidden;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+  }
 }

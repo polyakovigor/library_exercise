@@ -4,7 +4,7 @@
       .logo
         %h2 Edit profile
       = form_for(resource, as: resource_name, url: registration_path(resource_name), html: { method: :put }) do |f|
-        .form-box
+        .sub-login-box
           = render 'shared/error_messages'
           .field
             = f.label :first_name
@@ -38,5 +38,5 @@
           = link_to 'Back', :back
         .cancel
           %h3 Cancel my account
-          = link_to registration_path(resource_name), method: :delete, data: { confirm: 'Are you sure?' }, title: 'Delete account', class: 'btn btn-lg btn-danger' do
+          = link_to registration_path(resource_name), method: :delete, data: { confirm: 'Are you sure?' }, title: 'Your account will be deleted!', class: 'btn btn-lg btn-danger' do
             %span.glyphicon.glyphicon-trash{ aria: { hidden: true } }
